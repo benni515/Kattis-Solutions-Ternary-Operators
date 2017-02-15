@@ -6,9 +6,7 @@ const int d = 10000;
 string w = "welcome to code jam", t;
 int s = w.size(), z;
 int m[19][500];
-int b(int i, int p) {
-	return m[i][p]=i==s?1:(p>=z?0:(t[p]==w[i]?b(i+1,p+1):0)+b(i,p+1)%d);
-}
+int b(int i, int p) {return m[i][p]=i==s?1:(p>=z?0:(t[p]==w[i]?b(i+1,p+1):0)+b(i,p+1)%d);}
 
 int main() {
 	cin.sync_with_stdio(false);
