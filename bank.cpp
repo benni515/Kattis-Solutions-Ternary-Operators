@@ -7,9 +7,7 @@ vector<ii> k;
 int n,m;
 int e[10001][48];
 
-int dp(int a, int t) {
-	return e[a][t]=e[a][t]!=-1?e[a][t]:t==m?0:a>=n?0:max(dp(a+1,t),k[a].first>=t?dp(a+1,t+1)+k[a].second:0);
-}
+int dp(int a, int t) {return e[a][t]=e[a][t]!=-1?e[a][t]:t==m?0:a>=n?0:max(dp(a+1,t),k[a].first>=t?dp(a+1,t+1)+k[a].second:0);}
 
 int main() {
 	cin.sync_with_stdio(false);
